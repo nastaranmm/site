@@ -96,6 +96,7 @@ h2{
     }
 }
 /*Badges*/
+
 .badge {
     border-radius: 20px;
     font-size: 2rem;
@@ -115,9 +116,10 @@ h2{
 
 .badge--small{
     font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
 }
 
-@media screen &(min-width:1024px){
+@media screen and (min-width:1024px){
     .badge{
         font-size:11.5rem;
     }
@@ -133,8 +135,6 @@ h2{
     color:var(--color-headings);
     font-size: bold;
 }    
-    
-}
 
 .list--inline .list__item{
     display: inline-block;
@@ -231,8 +231,6 @@ h2{
     border: 2px solid var(--color-headings);
     border-radius: 4rem;
     padding: 2rem;
-
-
 }
 
 .btn--outline:hover{
@@ -281,5 +279,95 @@ h2{
 @media screen and (min-width:1024px) {
     .input{
         font-size: 1.5rem;
+    }
+}
+
+/*Cards*/
+
+.card{
+    border-radius: 7px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    overflow: hidden;
+}
+
+.card__header,
+.card__body{
+    padding: 2rem 3rem;
+}
+
+.card--primary .card__header{
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.card--secondary .card__header{
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+.card--secondary .badge--seconadry{
+    background: #02cdf1;
+}
+
+/*plans*/
+
+.plan__name{
+    color: #fff;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+.plan__price{
+    font-size: 6rem;
+}
+
+.plan__billing-cycle{
+    font-size: 2.4rem;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-right: 1rem;
+}
+
+.plan__description{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.plan .list__item{
+    margin-bottom: 2rem;
+}
+
+.plan--popular .card__header{
+    position: relative;
+}
+
+.plan--popular .card__header::before{
+    content: url(../images/popular.svg);
+    width: 1px;
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    right: 50%;
+}
+
+
+@media screen and (min-width:1024){
+    .plan__name{
+        font-size: 1.4rem;
+    }
+
+    .plan__price{
+        font-size: 5rem;
+    }
+
+    .plan__billing-cycle{
+        font-size: 1.6rem;
+    }
+
+    .plan__description{
+        font-size: 1.7rem;
     }
 }
