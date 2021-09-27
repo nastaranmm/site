@@ -161,12 +161,21 @@ h2{
 /* Icons */
 
 .icon{
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
+}
+
+.icon--small{
+    height: 30px;
+    width: 30px;
 }
 
 .icon--primary{
     fill: var(--color-primary);
+}
+
+.icon--white{
+    fill: #fff;
 }
 
 .icon-container{
@@ -178,6 +187,10 @@ h2{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+}
+
+.icon-container--accent{
+    background: var(--color-accent);
 }
 
 /*Buttons*/
@@ -206,6 +219,11 @@ h2{
 .btn--secondary{
     background: var(--color-secondary);
     color:#fff;
+}
+
+.btn--streched{
+    padding-left: 6rem;
+    padding-right: 6rem;
 }
 
 .btn--block{
@@ -439,4 +457,137 @@ h2{
     .quote_organization{
         font-size: 1.6rem;
     }
+}
+
+/*Grids*/
+
+.grid{
+    display: grid;
+}
+
+@media screen and (min-width:768px){
+    .grid--2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width:1024px){
+    .grid--3{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*testimonials*/
+
+.testimonial{
+    padding: 3rem;
+}
+
+.testimonial__image{
+    position:;
+}
+
+.testimonial__image > image{
+  
+}
+
+.testimonial__image >.icon-container{
+    position: absolute;
+    bottom: 100rem;
+    top: 100rem;
+    right: -20px;
+}
+
+@media screen  and (min-width:768px){
+    .testimonial .quote,
+    .testimonial .quote__author {
+        font-size: 2.4rem;
+    }
+
+    .testimonial .quote{
+        margin-left: 6rem;
+    }
+}
+
+/*callouts*/
+
+.callout{
+    padding: 4rem;
+    border-radius: 5px;
+}
+
+.callout--primary{
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.callout__heading{
+    color: #fff;
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.callout .btn{
+    justify-self: center;
+    align-self: center;
+}
+
+.callout__content{
+    text-align: center;
+}
+
+@media screen and (min-width:768px) {
+
+    .callout.grid--2{
+        grid-template-columns: 1fr auto;
+    }
+
+    .callout__content{
+        text-align: left;
+    }
+
+    .callout .btn{
+        justify-self: start;
+        margin: 0 2rem;
+    }
+}
+
+/*collapsibles*/
+
+.collapsible__header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible__heading{
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.collapsible__shevron {
+    transform: rotate(-90deg);
+}
+
+.collapsible__shevron1{
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+}
+
+.collapsible__content{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__content{
+    max-height: 100vh;
+}
+
+.collapsible--expanded .collapsible__shevron{
+    transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__shevron1{
+    transform: rotate(0);
 }
