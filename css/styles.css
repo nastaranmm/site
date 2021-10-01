@@ -4,7 +4,7 @@
     --color-accent:#ff3400;
     --color-headings:#1b0760;
     --color-body:#918ca4;
-    --color-body-darker:#5c5577
+    --color-body-darker:#5c5577;
     --color-border:#ccc;
     --border-radius:30px;
    
@@ -100,9 +100,9 @@ h2{
 /*Badges*/
 
 .badge {
-    border-radius: 20px;
+    border-radius: 200px;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: bold;
     padding: 0.5rem 2rem;
     white-space: nowrap;
 }
@@ -162,8 +162,8 @@ h2{
 /* Icons */
 
 .icon{
-    width: 80px;
-    height: 80px;
+    width:10px;
+    height: 10px;
 }
 
 .icon--small{
@@ -202,10 +202,18 @@ h2{
     font-size: 1.8rem;
     font-weight: 600;
     margin: 1rem 0;
+    outline: 0;
     padding: 2rem 3rem;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
+}
+
+.btn .icon{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
 }
 
 .btn--primary{
@@ -272,7 +280,7 @@ h2{
     border: 1px solid var(--color-border);
     color: var(--color-headings);
     font-size: 2rem;
-    outline: 0;
+    outline: 1;
     padding: 1.5rem 3.5rem;
 }
 
@@ -289,11 +297,11 @@ h2{
 .input-group .input{
     border:0;
     flex-grow: 1;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2rem;
 }
 
 .input-group .btn{
-    margin: 4px;
+    margin:1;
 }
 
 @media screen and (min-width:1024px) {
@@ -722,5 +730,31 @@ h2{
     .hero_content{
         text-align: left;
         align-self: center;
+    }
+}
+
+/*Domain Block*/
+
+.block-domain .input-group{
+    box-shadow: 0 0 30px #e6ebee;
+    border: 0;
+    margin: 4rem auto;
+    max-width: 670px;
+}
+
+.block-domain__prices{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+    .block-domain__prices{
+        grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
     }
 }
